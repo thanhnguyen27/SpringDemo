@@ -1,6 +1,6 @@
 annotation @Autowired biểu thị rằng các thuộc tính sẽ được auto wired:
 @Autowired(required=true)
-
+tự động tham chiếu đến  thành phần đối tượng được chỉ định trong bean 
 autowirring co 5 loại
  Auto-wiring ‘no’ -default
  Auto-wiring ‘byName’
@@ -14,6 +14,8 @@ autowirring co 5 loại
  Auto-Wiring ‘autodetect’
  
  ====================
+ @Qualifier("acerlaptop")//Qualifier giai quyet xung dot nhiều hon 1 bean cho cung 1 đoi tuong
+ 
  *Lưu ý: thuộc tính required của annotation @Autowired mặc định là true.
 
 required = true, nếu spring container không tìm thấy bean address để inject vào thì nó sẽ báo lỗi
