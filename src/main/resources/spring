@@ -1,4 +1,5 @@
 annotation @Autowired biểu thị rằng các thuộc tính sẽ được auto wired:
+@Autowired(required=true)
 
 autowirring co 5 loại
  Auto-wiring ‘no’ -default
@@ -23,6 +24,7 @@ required = false, nếu Spring container không tìm thấy bean address để i
 <context:annotation-config /> trong file config.
 
 ===================================Spring bean scopes
+@Scope("singleton")
 singleton – Return a single bean instance per Spring IoC container
 prototype – Return a new bean instance each time when requested
 request – Return a single bean instance per HTTP request. *
