@@ -1,0 +1,30 @@
+annotation @Autowired biểu thị rằng các thuộc tính sẽ được auto wired:
+
+autowirring co 5 loại
+ Auto-wiring ‘no’ -default
+ Auto-wiring ‘byName’
+ 
+ Auto-wiring ‘byType’:
+ để auto wired byType ta khai báo @Autowired ở trước phần khai báo thuộc tính hoặc trước method setter
+ 
+ Auto-Wiring ‘constructor’
+ Spring container sẽ tìm bean có type giống với type của address trong method constructor và thực hiện auto wired thông qua method constructor – public Person(Address address)
+ 
+ Auto-Wiring ‘autodetect’
+ 
+ ====================
+ *Lưu ý: thuộc tính required của annotation @Autowired mặc định là true.
+
+required = true, nếu spring container không tìm thấy bean address để inject vào thì nó sẽ báo lỗi
+required = false, nếu Spring container không tìm thấy bean address để inject vào thì nó sẽ inject null
+====================
+@Autowired là một annotation config của Spring, để sử dụng nó ta phải khai báo thẻ
+
+<context:annotation-config /> trong file config.
+
+===================================Spring bean scopes
+singleton – Return a single bean instance per Spring IoC container
+prototype – Return a new bean instance each time when requested
+request – Return a single bean instance per HTTP request. *
+session – Return a single bean instance per HTTP session. *
+globalSession – Return a single bean instance per global HTTP session. *
